@@ -1,0 +1,41 @@
+
+
+  <div class="table-page-container">
+
+
+
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th> <img class="imageClass" src="../../assets/images/status.png"/></th>
+            <th>תאור תעודה</th>
+            <th>ספק</th>
+            <th>עלות</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of invoices" (click)="navigateToDetail(row.id)">
+            <td>
+              <div class="image-container">
+                <img *ngIf="row.status === 'success'" src="../../assets/images/success.png" alt="Success" class="status-image">
+                <img *ngIf="row.status === 'error'" src="../../assets/images/error.png" alt="Error" class="status-image">
+                <img *ngIf="row.status === 'panding'" src="../../assets/images/pending.png" alt="Error" class="status-image">
+              </div>
+            </td>
+            <td>
+              {{ row.name }}
+              <br/>
+              {{ row.date | date: 'dd/MM/yyyy' }}
+            </td>
+            <td>{{ row.supplier }}</td>
+            <td>{{ row.cost }} ₪</td>
+
+
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

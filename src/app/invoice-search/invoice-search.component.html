@@ -1,0 +1,55 @@
+<div class="disply-grid">
+  <div class="summary-button">
+    <button (click)="toggleView()">
+        <div class="image-container">
+          <img *ngIf="viewMode === 'list'" src="../../assets/images/list.png" alt="Success" class="status-image">
+          <img *ngIf="viewMode === 'preview'" src="../../assets/images/preview.png" alt="Error" class="status-image">
+        </div>
+      </button>
+    <input type="text"
+           placeholder="...חפש"
+           style="text-align: right;width: 30%;border-radius: 15px;font-size: larger;"
+           (input)="onSearchChange($any($event.target).value)" />
+
+    <input type="date"
+    style="width: 30%;border-radius: 15px;text-align: right;font-size: larger;"
+             (change)="onDateChange($any($event.target).value)" />
+  </div>
+  <div>
+    <div class="summary-boxes">
+      <div class="summary-box">
+        <div class="value">4</div>
+        <div class="title">סה"כ</div>
+      </div>
+      <div class="summary-box">
+        <div class="value">
+          2
+        </div>
+        <div class="title">נשלח בהצלחה</div>
+      </div>
+      <div class="summary-box">
+        <div class="value">
+         1
+        </div>
+        <div class="title">שגיאה</div>
+      </div>
+      <div class="summary-box">
+        <div class="value">
+         1
+        </div>
+        <div class="title">ממתין לאישור</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  <div>
+    <ng-container *ngIf="viewMode === 'list'">
+      <app-invoice-list [invoices]="filteredInvoices"></app-invoice-list>
+    </ng-container>
+    <ng-container *ngIf="viewMode === 'preview'">
+      <app-invoice-preview [invoices]="filteredInvoices"></app-invoice-preview>
+    </ng-container>
+  </div>

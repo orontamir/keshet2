@@ -1,0 +1,37 @@
+.image-container {
+  width: 40px;
+}
+
+.status-image {
+  max-width: 50px;
+  width: 70%;
+  height: auto;
+  display: inline-block;
+}
+
+
+.disply-grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.summary-boxes {
+  display: flex;
+  gap: 0px;
+}
+
+.summary-button{
+  display: flex;
+  gap: 40px;
+}
+
+.summary-box {
+  background-color: #f2f2f2;
+  padding: 10px 60px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.summary-box .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

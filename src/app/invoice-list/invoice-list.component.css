@@ -1,0 +1,138 @@
+.table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+
+  thead {
+    background-color: #C5D5FA
+  }
+
+  thead tr {
+    border-bottom: 2px solid #ccc;
+  }
+  tbody tr {
+    border-bottom: 1px solid #ccc;
+  }
+
+  tbody tr:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: right;
+    width: 5%;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: left;
+    width: 10%;
+    padding-left: 5%;
+  }
+
+
+  .title-container
+  {
+     border: none;
+     background-color: white;
+  }
+
+  th, td {
+    border: none;
+    text-align: right;
+    padding: 8px;
+
+  }
+
+
+.table-page-container {
+  direction: rtl; /* Right-to-left layout for Hebrew */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="date"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.summary-box {
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.summary-box .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.success {
+  color: green;
+  font-weight: bold;
+  background-image:url('../../assets/images/status.png');
+}
+.error {
+  color: red;
+  font-weight: bold;
+  background-image:url('../../assets/images/status.png');
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.status-image {
+  max-width: 50px;
+  width: 70%;
+  height: auto;
+  display: inline-block;
+}
+
+.imageClass{
+  max-width: 50px;
+  width: 70%;
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 7px;
+}
+
+.summary-boxes {
+  display: flex;
+  gap: 0px;
+}
+
+.summary-box {
+  background-color: #f2f2f2;
+  padding: 10px 50px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.summary-box .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

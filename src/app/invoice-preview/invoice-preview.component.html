@@ -1,0 +1,11 @@
+<div *ngFor="let invoice of invoices"
+     style="border: 1px solid #ccc; margin: 10px; padding: 10px;">
+  <h3 (click)="navigateToDetail(invoice.id)" style="cursor:pointer; color: blue;">
+    {{ invoice.name }}
+  </h3>
+  <p>Supplier: {{ invoice.supplier }}</p>
+  <p>Date: {{ invoice.date | date:'shortDate' }}</p>
+  <div style="border: 1px solid black; width: 200px; height: 150px; background-color: #f0f0f0;">
+    <img class="imageClass" [src]="invoice.path"/>
+  </div>
+</div>

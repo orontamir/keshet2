@@ -1,0 +1,11 @@
+<div *ngIf="invoice">
+    <h2>תאור תעודה:{{ invoice.name }}</h2>
+    <p>ספק: {{ invoice.supplier }}</p>
+    <p>עלות: {{ invoice.cost }}</p>
+    <p>תאריך: {{ invoice.date | date:'fullDate' }}</p>
+    <img class="imageClass" [src]="invoice.path"/>
+  </div>
+  <div *ngIf="!invoice">
+    <p>Invoice not found.</p>
+  </div>
+  
