@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 export interface Invoice {
   id: number;
@@ -22,7 +23,7 @@ export class InvoiceService {
     { id: 4, name: 'יום עיון', supplier: 'דוד', cost:500,date: new Date('2025-01-03'), path: "assets/images/invoice.png", status: 'panding'  },
   ];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getInvoices(): Observable<Invoice[]> {
     return of(this.invoices);
@@ -31,5 +32,10 @@ export class InvoiceService {
   getInvoiceById(id: number): Observable<Invoice | undefined> {
     const invoice = this.invoices.find(inv => inv.id === id);
     return of(invoice);
+  }
+
+  getall(): Observable<Invoice[]> {
+    var apiUrl = 'http://localhost:3000/getall';
+    return this.http.get<Invoice[]>(`${apiUrl}`);
   }
 }
